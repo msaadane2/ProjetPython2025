@@ -123,9 +123,16 @@ print(df_conc.head())
 print("\nTD6 stats")
 corpus.stats(n=10, avec_doc_freq=True)
 
-# Affichage TD7 : moteur de recherch
+# Affichage TD7 : moteur de recherche
 print("\nTD7 moteur de recherche")  # titre affiché
 moteur = SearchEngine(corpus2)  # créer le moteur à partir du corpus
 requete = input("Requête : ")  # l'utilisateur saisit les mots-clés
 resultats = moteur.search(requete, nb_docs=5, use_tfidf=True)  # lancer la recherche
 print(resultats)  # afficher les documents les plus pertinents
+
+#Affichage TD8/9/10: interface utilisateur 
+import subprocess
+import sys
+if __name__ == "__main__":
+    subprocess.run([sys.executable, "-m", "streamlit", "run", "app.py"])
+

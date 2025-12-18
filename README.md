@@ -49,13 +49,13 @@ Lancer le script principal avec la commande suivante :
 python main.py
 
 # Les bibliothèques nécessaires :
-pandas – manipulation des données tabulaires
-praw – récupération des données depuis Reddit
-xmltodict – parsing des données XML de l’API arXiv
-scipy – matrices creuses et calculs numériques (TF / TF-IDF)
-tqdm – barre de progression pour les traitements longs
-streamlit – interface graphique interactive (TD8 à TD10)
-ipywidgets – utilisé lors du prototypage sous Jupyter Notebook
+- pandas – manipulation des données tabulaires
+- praw – récupération des données depuis Reddit
+- xmltodict – parsing des données XML de l’API arXiv
+- scipy – matrices creuses et calculs numériques (TF / TF-IDF)
+- tqdm – barre de progression pour les traitements longs
+- streamlit – interface graphique interactive (TD8 à TD10)
+- ipywidgets – utilisé lors du prototypage sous Jupyter Notebook
 
 # Installation recommandée :
 pip install pandas praw xmltodict scipy tqdm streamlit ipywidgets

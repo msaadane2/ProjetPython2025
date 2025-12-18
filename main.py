@@ -5,11 +5,11 @@ from TD3_recuperation_reddit import recuperer_textes_reddit, recuperer_docs_redd
 from TD3_recuperation_arxiv import recuperer_textes_arxiv, recuperer_docs_arxiv_complets
 from TD3_corpus_io import construire_dataframe, sauvegarder_corpus, charger_corpus
 from TD3_stats import afficher_stats, filtrer_docs_trop_petits, construire_gros_texte
-
 #TD4 / TD5 : Structuration du code avec des classes
 from TD4_5_document import Document, RedditDocument, ArxivDocument
 from TD4_5_corpus import Corpus
-
+#TD 7 : moteur de recherche
+from TD7_moteur_recherche import SearchEngine
 # TD3 : Partie 1 : Chargement des données depuis Reddit et ArXiv
 theme = "photography"
 # TD3 , 4 & 5 : Sauvegarde des données
@@ -110,3 +110,22 @@ corpus2.show(n=5, tri="titre")
 if len(corpus2.authors) > 0:
     premier_auteur = list(corpus2.authors.keys())[0]
     corpus2.stats_auteur(premier_auteur)
+    
+# affichage de la partie TD6 search
+print("\nTD6 search")
+res = corpus.search(r"photo")
+print(res[:2]) # afficher seulement 2 résultats
+# affichage du concordancier
+print("\nTD6 concorde")
+df_conc = corpus.concorde(r"photo", contexte=20)
+print(df_conc.head())
+# affichage des statistiques
+print("\nTD6 stats")
+corpus.stats(n=10, avec_doc_freq=True)
+
+# Affichage TD7 : moteur de recherch
+print("\nTD7 moteur de recherche")  # titre affiché
+moteur = SearchEngine(corpus2)  # créer le moteur à partir du corpus
+requete = input("Requête : ")  # l'utilisateur saisit les mots-clés
+resultats = moteur.search(requete, nb_docs=5, use_tfidf=True)  # lancer la recherche
+print(resultats)  # afficher les documents les plus pertinents

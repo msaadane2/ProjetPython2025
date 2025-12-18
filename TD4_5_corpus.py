@@ -4,6 +4,8 @@ import os  # pour gérer les chemins et créer des dossiers
 import pandas as pd  # pour utiliser DataFrame et CSV
 from TD4_5_author import Author
 from TD4_5_document import Document, RedditDocument, ArxivDocument
+# TD6 : traitement du texte (search / concorde / stats)
+from td6_traitement_texte import corpus_search, corpus_concorde, corpus_stats
 # TD5 : Factory = classe qui crée automatiquement le bon type de document
 class DocumentFactory:
     @staticmethod
@@ -183,3 +185,13 @@ class Corpus:
             # ajout dans le corpus
             corpus.add_document(doc)
         return corpus
+ # TD6: regex + statistiques
+ # chercher un motif (regex) dans les documents du corpus
+    def search(self, motif, contexte=60):
+        return corpus_search(self, motif, contexte)
+    # retourner le concordancier (gauche / motif / droite)
+    def concorde(self, motif, contexte=30):
+        return corpus_concorde(self, motif, contexte)
+    # afficher et retourner les statistiques du corpus
+    def stats(self, n=10, avec_doc_freq=True):
+        return corpus_stats(self, n, avec_doc_freq)

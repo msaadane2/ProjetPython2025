@@ -1,4 +1,4 @@
-Projet Python : VERSION1 TD3 à TD5*
+Projet Python : VERSION2 TD3 à TD7
 Binômes: Fatine MOURID & Manel SAADANE
 Programmation de spécialité (Python)
 
@@ -9,6 +9,8 @@ Contenu du projet
 - TD3 : acquisition des données, sauvegarde et premières statistiques
 - TD4 : structuration du code avec des classes (Document, Author, Corpus)
 - TD5 : héritage, polymorphisme et patrons de conception (Factory, Singleton)
+- TD6 : Analyse du contenu textuel
+- TD7: Moteur de recherche 
 
 Organisation des fichiers
 - main.py : script principal d’exécution
@@ -19,6 +21,8 @@ Organisation des fichiers
 - TD4_5_document.py : classes Document, RedditDocument et ArxivDocument
 - TD4_5_author.py : classe Author
 - TD4_5_corpus.py : classe Corpus + sauvegarde/chargement + patrons
+- td6_traitement_texte: Traitement du texte
+- TD7_moteur_recherche: Moteur de recherche
 
 Exécution
 Lancer le script principal avec la commande suivante :
@@ -29,3 +33,6 @@ Les bibliothèques nécessaires :
 praw: python -m pip install praw pandas xmltodict, python -m pip install praw
 pandas
 xmltodict
+scipy: pip install scipy
+ipywidgets: Interface graphique interactive 
+tqdmBarre de progression pour les traitements longs 

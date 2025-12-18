@@ -33,11 +33,14 @@ Ce projet a pour but de mettre en place un moteur de recherche d’information s
 
 # Précision T8/9/10: 
 Les TD8, TD9 et TD10 ont été initialement développés dans un environnement Anaconda, en utilisant Jupyter Notebook (.ipynb) afin de faciliter l’exploration des données, les tests progressifs et la mise au point des différentes fonctionnalités.
+
 Dans une étape suivante, les notebooks Jupyter ont été exportés en scripts Python (.py). Le code obtenu a ensuite été réorganisé et intégré dans une nouvelle interface développée en Python avec la bibliothèque Streamlit.
+
 Cette interface Streamlit reprend la même logique et les mêmes fonctionnalités que celles implémentées dans les fichiers .ipynb, avec en plus une exécution standardisée et interactive via un navigateur web.
+
 Cette transition permet :
-- de conserver le travail réalisé dans les notebooks,
-- d’obtenir une version exécutable et modulaire du projet
+- De conserver le travail réalisé dans les notebooks,
+- D’obtenir une version exécutable et modulaire du projet
 
 Les fichiers .ipynb sont donc conservés comme support de développement, tandis que les fichiers .py et l’interface Streamlit constituent la version finale du projet.
 

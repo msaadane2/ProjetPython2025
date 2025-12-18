@@ -1,4 +1,4 @@
-# Projet Python : VERSION3 - RENDU FINAL TD3 au TD10
+# Projet Python : RENDU FINAL TD3 au TD10
 # Binômes: Fatine MOURID & Manel SAADANE
 # Programmation de spécialité (Python)
 
